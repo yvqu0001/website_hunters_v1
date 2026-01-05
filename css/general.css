@@ -87,6 +87,8 @@ p,
   font-size: var(--p-size);
   color: var(--pink1);
   font-weight: var(--font-weight-regular);
+  text-wrap: pretty;
+  hyphens: auto;
 }
 
 .button {
@@ -105,5 +107,6 @@ button {
   :root {
     --h1-size: clamp(2.4rem, 7vw, 6.5rem);
     --h2-size: clamp(1.8rem, 3.5vw, 3.2rem);
+    --p-size: 1rem;
   }
 }
