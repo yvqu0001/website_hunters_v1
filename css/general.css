@@ -1,0 +1,109 @@
+/* FONT */
+@import url("https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* colors */
+  --purple: #e3d2f6;
+  --blue: #bcebfb;
+  --pink1: #ffe8f4;
+  --pink2: #fdd1eb;
+  --pink3: #feb3de;
+  --pink4: #fb9ccc;
+  --pink5: #ff6cb8;
+
+  /* font */
+  --font-normal: "Tomorrow", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-title: "Geo", "jersey 10", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-style-italic: italic;
+
+  /* font size !!!!!!!!!!!!!!!!!!!!!!*/
+  --h1-size: clamp(3rem, 8vw, 8rem);
+  --h2-size: clamp(2rem, 4vw, 4rem);
+  --h3-size: 3rem;
+  --h4-size: 4rem;
+  --p-size: 1.25rem;
+}
+
+html {
+  background-color: var(--pink4);
+  background: url(../img/SVG/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  height: 100%;
+}
+
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  /* maybe change darken color */
+  background: rgba(119, 29, 74, 0.4);
+  z-index: -1;
+  pointer-events: none;
+}
+
+h1 {
+  font-family: var(--font-title);
+  font-size: var(--h1-size);
+  font-style: var(--font-style-italic);
+  color: var(--pink1);
+  font-weight: var(--font-weight-regular);
+}
+
+h2 {
+  font-family: var(--font-title);
+  font-size: var(--h2-size);
+  font-style: var(--font-style-italic);
+  color: var(--pink1);
+  font-weight: var(--font-weight-regular);
+}
+
+h3 {
+  font-family: var(--font-title);
+  font-size: var(--h3-size);
+  font-style: var(--font-style-italic);
+  color: var(--pink1);
+  font-weight: var(--font-weight-regular);
+}
+
+h4 {
+  font-family: var(--font-title);
+  font-size: var(--h4-size);
+  font-style: var(--font-style-italic);
+  color: var(--pink1);
+  font-weight: var(--font-weight-regular);
+}
+
+p,
+.cta_btn {
+  font-family: var(--font-normal);
+  font-size: var(--p-size);
+  color: var(--pink1);
+  font-weight: var(--font-weight-regular);
+}
+
+.button {
+  cursor: pointer;
+}
+
+.return_button {
+  display: inline-block;
+}
+
+button {
+  border: none;
+}
+
+@media (max-width: 425px) {
+  :root {
+    --h1-size: clamp(2.4rem, 7vw, 6.5rem);
+    --h2-size: clamp(1.8rem, 3.5vw, 3.2rem);
+  }
+}
