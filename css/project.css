@@ -90,6 +90,12 @@ main {
 }
 
 /* + sign */
+summary {
+  list-style: none; /* removes any bullet fallback */
+  cursor: pointer;
+  padding-left: 0;
+}
+
 summary::marker {
   content: none;
 }
@@ -108,6 +114,10 @@ summary::marker {
 [open] .cta_btn_card::before {
   content: "– ";
   color: var(--pink2);
+}
+
+summary::-webkit-details-marker {
+  display: none; /* Safari/Chrome mobile fix */
 }
 
 .hide {
@@ -152,25 +162,5 @@ summary::marker {
   }
   .accordion_content p {
     padding-bottom: 1rem;
-  }
-  /* + sign */
-  summary::marker {
-    content: none;
-  }
-
-  .cta_btn_card::before {
-    content: "+ ";
-    color: var(--pink2);
-  }
-
-  .cta_btn_card::after {
-    font-family: system-ui;
-    font-weight: 400;
-    font-size: 1.1rem;
-  }
-
-  [open] .cta_btn_card::before {
-    content: "– ";
-    color: var(--pink2);
   }
 }
