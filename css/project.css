@@ -95,6 +95,10 @@ summary::marker {
   color: var(--pink5);
 }
 
+.hide {
+  display: none;
+}
+
 @media (max-width: 425px) {
   main {
     width: 90vw;
