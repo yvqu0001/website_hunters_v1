@@ -17,9 +17,6 @@ main {
     width: 60vw;
     margin: 0 auto 5.5rem auto;
   }
-  .img {
-    border: solid 10px var(--pink2);
-  }
 }
 
 .links {
@@ -42,9 +39,11 @@ main {
 .card {
   background-color: var(--pink2);
   padding: 2rem;
-  border: 10px solid var(--pink3);
   max-width: 35vw;
   margin-bottom: 10rem;
+  filter: drop-shadow(-1px -1px 0 var(--pink1))
+    drop-shadow(-2px -2px 0 var(--pink1)) drop-shadow(1px 1px 0 var(--pink4))
+    drop-shadow(2px 2px 0 var(--pink4));
 }
 
 .card video {
@@ -55,23 +54,36 @@ main {
 
 .accordion_content p {
   padding-bottom: 2rem;
-  color: var(--pink5);
+  color: var(--pink4);
 }
 
-.cta_btn {
+.cta_btn_card {
+  font-family: var(--font-title);
+  font-size: var(--h4-size);
+  font-weight: var(--font-weight-regular);
+  color: var(--pink2);
+  text-wrap: pretty;
+  hyphens: auto;
   background-color: var(--pink3);
   cursor: pointer;
   text-align: center;
   margin: 2rem auto;
   padding: 1rem;
-  max-width: 150px;
-  color: var(--pink5);
+  max-width: 250px;
+  filter: drop-shadow(-1px -1px 0 var(--pink1))
+    drop-shadow(-2px -2px 0 var(--pink1)) drop-shadow(1px 1px 0 var(--pink4))
+    drop-shadow(2px 2px 0 var(--pink4));
+  letter-spacing: 3px;
+  text-shadow: -1px -1px 0 var(--pink1), -2px -2px 0 var(--pink1),
+    1px 1px 0 var(--pink4), 2px 2px 0 var(--pink4);
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-.cta_btn:hover {
+.cta_btn_card:hover {
   background-color: var(--blue);
-  color: var(--pink5);
+  color: var(--pink2);
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 /* + sign */
@@ -79,20 +91,20 @@ summary::marker {
   content: none;
 }
 
-.cta_btn::before {
+.cta_btn_card::before {
   content: "+ ";
-  color: var(--pink5);
+  color: var(--pink2);
 }
 
-.cta_btn::after {
+.cta_btn_card::after {
   font-family: system-ui;
   font-weight: 400;
   font-size: 1.1rem;
 }
 
-[open] .cta_btn::before {
+[open] .cta_btn_card::before {
   content: "– ";
-  color: var(--pink5);
+  color: var(--pink2);
 }
 
 .hide {
@@ -118,9 +130,6 @@ summary::marker {
       width: 90vw;
       margin: 0 auto 3rem auto;
     }
-    .img {
-      border: solid 5px var(--pink2);
-    }
   }
   .links {
     width: 150px;
@@ -135,7 +144,6 @@ summary::marker {
   }
   .card {
     padding: 1.5rem;
-    border: 5px solid var(--pink3);
     max-width: 100%;
     margin-bottom: 3rem;
   }

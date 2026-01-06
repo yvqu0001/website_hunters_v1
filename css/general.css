@@ -1,5 +1,5 @@
 /* FONT */
-@import url("https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Press+Start+2P&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   /* colors */
@@ -8,23 +8,22 @@
   --pink1: #ffe8f4;
   --pink2: #fdd1eb;
   --pink3: #feb3de;
-  --pink4: #fb9ccc;
+  --pink4: #ff87c3;
   --pink5: #ff6cb8;
 
   /* font */
   --font-normal: "Tomorrow", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-title: "Geo", "jersey 10", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
+  --font-title: "Press Start 2P", "jersey 10", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
-  --font-style-italic: italic;
 
   /* font size !!!!!!!!!!!!!!!!!!!!!!*/
-  --h1-size: clamp(3rem, 8vw, 8rem);
-  --h2-size: clamp(2rem, 4vw, 4rem);
-  --h3-size: 3rem;
-  --h4-size: 4rem;
+  --h1-size: clamp(1.45rem, 3.9vw, 3.88rem);
+  --h2-size: clamp(1.15rem, 2.4vw, 2.43rem);
+  --h3-size: 1.45rem;
+  --h4-size: 1rem;
   --p-size: 1.25rem;
 }
 
@@ -44,7 +43,7 @@ html::before {
   position: fixed;
   inset: 0;
   /* maybe change darken color */
-  background: rgba(119, 29, 74, 0.4);
+  background: rgba(119, 29, 74, 0.2);
   z-index: -1;
   pointer-events: none;
 }
@@ -52,43 +51,67 @@ html::before {
 h1 {
   font-family: var(--font-title);
   font-size: var(--h1-size);
-  font-style: var(--font-style-italic);
-  color: var(--pink1);
+  color: var(--pink2);
   font-weight: var(--font-weight-regular);
+  text-shadow: -1px -1px 0 var(--pink1), -2px -2px 0 var(--pink1),
+    1px 1px 0 var(--pink4), 2px 2px 0 var(--pink4);
 }
 
 h2 {
   font-family: var(--font-title);
   font-size: var(--h2-size);
-  font-style: var(--font-style-italic);
-  color: var(--pink1);
+  color: var(--pink2);
   font-weight: var(--font-weight-regular);
+  text-shadow: -1px -1px 0 var(--pink1), -2px -2px 0 var(--pink1),
+    1px 1px 0 var(--pink4), 2px 2px 0 var(--pink4);
 }
 
 h3 {
   font-family: var(--font-title);
   font-size: var(--h3-size);
-  font-style: var(--font-style-italic);
-  color: var(--pink1);
+  color: var(--pink2);
   font-weight: var(--font-weight-regular);
+  text-shadow: -1px -1px 0 var(--pink1), -2px -2px 0 var(--pink1),
+    1px 1px 0 var(--pink4), 2px 2px 0 var(--pink4);
 }
 
 h4 {
   font-family: var(--font-title);
   font-size: var(--h4-size);
-  font-style: var(--font-style-italic);
-  color: var(--pink1);
+  color: var(--pink2);
   font-weight: var(--font-weight-regular);
+  text-shadow: -1px -1px 0 var(--pink1), -2px -2px 0 var(--pink1),
+    1px 1px 0 var(--pink4), 2px 2px 0 var(--pink4);
 }
 
-p,
-.cta_btn {
+p {
   font-family: var(--font-normal);
   font-size: var(--p-size);
   color: var(--pink1);
   font-weight: var(--font-weight-regular);
   text-wrap: pretty;
   hyphens: auto;
+  cursor: pointer;
+}
+
+.cta_btn {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: var(--h4-size);
+  color: var(--pink2);
+  font-weight: var(--font-weight-regular);
+  text-wrap: pretty;
+  hyphens: auto;
+  cursor: pointer;
+  letter-spacing: 3px;
+  text-shadow: -1px -1px 0 var(--pink1), -2px -2px 0 var(--pink1),
+    1px 1px 0 var(--pink4), 2px 2px 0 var(--pink4);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.cta_btn:hover {
+  transform: scale(1.1);
+  color: var(--blue);
 }
 
 .button {
@@ -103,10 +126,42 @@ button {
   border: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+img {
+  filter: drop-shadow(-1px -1px 0 var(--pink1))
+    drop-shadow(-2px -2px 0 var(--pink1)) drop-shadow(1px 1px 0 var(--pink4))
+    drop-shadow(2px 2px 0 var(--pink4));
+}
+
+svg.clickable-svg {
+  cursor: pointer; /* shows it’s clickable */
+  transition: transform 0.2s ease, filter 0.2s ease;
+  filter: drop-shadow(-0.5px -0.5px 0 var(--pink1))
+    drop-shadow(-1px -1px 0 var(--pink1))
+    drop-shadow(0.5px 0.5px 0 var(--pink4)) drop-shadow(1px 1px 0 var(--pink4));
+}
+
+svg.clickable-svg:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(-1px -1px 0 var(--pink1))
+    drop-shadow(-1.5px -1.5px 0 var(--pink1))
+    drop-shadow(1px 1px 0 var(--pink4)) drop-shadow(1.5px 1.5px 0 var(--pink4));
+}
+
+/* svg.clickable-svg:hover [fill]:not([fill="none"]),
+svg.clickable-svg:hover [stroke]:not([stroke="none"]) {
+  fill: var(--blue);
+  stroke: var(--blue);
+} */
+
 @media (max-width: 425px) {
   :root {
-    --h1-size: clamp(2.4rem, 7vw, 6.5rem);
-    --h2-size: clamp(1.8rem, 3.5vw, 3.2rem);
+    --h1-size: clamp(1rem, 5.5vw, 2rem);
+    --h2-size: clamp(0.75rem, 3vw, 1.5rem);
+    --h3-size: clamp(0.9rem, 3.5vw, 1.6rem);
     --p-size: 1rem;
   }
 }
