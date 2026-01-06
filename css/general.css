@@ -185,4 +185,8 @@ header {
     --h3-size: clamp(0.9rem, 3.5vw, 1.6rem);
     --p-size: 1rem;
   }
+  .return-button {
+    width: 30px;
+    height: 30px;
+  }
 }

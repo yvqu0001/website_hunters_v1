@@ -68,15 +68,26 @@ img.clickable:hover {
 
 @media (max-width: 425px) {
   .carousel_wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: block; /* easier for layout */
     max-width: 100vw;
+    margin: 0 auto;
+    place-content: center;
   }
 
   .project_carousel {
     max-width: 100vw;
-    overflow: visible;
+    overflow: hidden; /* THIS keeps other slides hidden */
+    position: relative; /* keep track positioning */
+  }
+
+  .carousel_track {
+    display: flex; /* still flex row */
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .project_name {
+    min-width: 100vw; /* each slide takes full viewport width */
+    flex-shrink: 0; /* prevent shrinking */
   }
 
   .project_name img {
@@ -85,11 +96,12 @@ img.clickable:hover {
   }
 
   .arrow_wrapper {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 3rem;
   }
 
   .arrow {
-    display: inline-block;
-    margin: 2rem 3rem;
+    max-width: 30px;
   }
 }
