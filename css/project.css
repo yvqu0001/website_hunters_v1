@@ -50,6 +50,9 @@ main {
   width: 100%;
   object-fit: contain;
   display: block;
+  filter: drop-shadow(-1px -1px 0 var(--pink1))
+    drop-shadow(-2px -2px 0 var(--pink1)) drop-shadow(1px 1px 0 var(--pink4))
+    drop-shadow(2px 2px 0 var(--pink4));
 }
 
 .accordion_content p {
