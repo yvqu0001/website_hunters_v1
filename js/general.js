@@ -9,6 +9,7 @@ if (localStorage.getItem("darkMode") === "enabled") {
 
 // Toggle function
 function colorSchemeToggle() {
+  console.log("toggle dark mode");
   html.classList.toggle("dark");
 
   // Save preference

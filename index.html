@@ -39,7 +39,33 @@
             <a href="credits.html" class="cta_btn">Credits</a>
           </div>
           <div>
-            <button class="cta_btn" id="toggle">Settings</button>
+            <button popovertarget="popup" class="cta_btn" id="open_settings">
+              Indstillinger
+            </button>
+          </div>
+          <div popover id="popup" class="popup hidden">
+            <button class="close-btn return-button" aria-label="Close popup">
+              <svg
+                width="99"
+                height="99"
+                viewBox="0 0 99 99"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                class="clickable-svg"
+              >
+                <path
+                  d="M70.7105 98.995L-0.000175834 28.2844L28.2841 8.47578e-05L98.9948 70.7108L70.7105 98.995Z"
+                  fill="var(--pink3)"
+                />
+                <path
+                  d="M98.9948 28.2844L28.2841 98.995L-0.000175834 70.7108L70.7105 8.47578e-05L98.9948 28.2844Z"
+                  fill="var(--pink3)"
+                />
+              </svg>
+            </button>
+            <h1>Indstillinger</h1>
+            <button class="cta_btn_card" id="toggle">Darkmode</button>
           </div>
         </div>
       </section>
