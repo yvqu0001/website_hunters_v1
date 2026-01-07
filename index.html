@@ -16,8 +16,13 @@
     />
   </head>
   <body class="fade-in">
+    <div class="hero">
+      <video autoplay muted loop playsinline>
+        <source src="img/background_video.mp4" type="video/mp4" />
+      </video>
+    </div>
     <main>
-      <div>
+      <section>
         <div class="title">
           <h1>Website Hunters</h1>
           <h3>Portfolio af Yvonne</h3>
@@ -34,11 +39,12 @@
             <a href="credits.html" class="cta_btn">Credits</a>
           </div>
           <div>
-            <button class="cta_btn">Settings</button>
+            <button class="cta_btn" id="toggle">Settings</button>
           </div>
         </div>
-      </div>
+      </section>
     </main>
+    <script src="js/general.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

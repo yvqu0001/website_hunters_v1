@@ -3,6 +3,8 @@ main {
   place-items: center;
   min-height: 100vh;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .button_wrapper {
