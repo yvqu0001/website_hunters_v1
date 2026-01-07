@@ -13,9 +13,12 @@ main {
     margin-bottom: 2rem;
     text-align: center;
   }
-  p {
+  .text {
     width: 60vw;
     margin: 0 auto 5.5rem auto;
+  }
+  p {
+    margin: 1rem auto;
   }
 }
 

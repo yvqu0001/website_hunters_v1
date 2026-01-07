@@ -1,3 +1,18 @@
+/* PULSE */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(0.98);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+h1 {
+  animation: pulse 2s ease-in-out infinite;
+}
+
 .carousel_wrapper {
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
@@ -62,8 +77,8 @@ img.clickable {
 img.clickable:hover {
   transform: scale(1.01);
   filter: drop-shadow(-2px -2px 0 var(--pink1))
-    drop-shadow(-3px -3px 0 var(--pink1)) drop-shadow(2px 2px 0 var(--pink4))
-    drop-shadow(3px 3px 0 var(--pink4));
+    drop-shadow(-3px -3px 0 var(--pink1)) drop-shadow(2px 2px 0 var(--blue))
+    drop-shadow(3px 3px 0 var(--blue));
 }
 
 @media (max-width: 425px) {

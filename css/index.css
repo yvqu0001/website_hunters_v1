@@ -17,3 +17,17 @@ h2,
 .cta_btn {
   text-transform: uppercase;
 }
+
+/* PULSE */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(0.98);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+.title {
+  animation: pulse 1.5s ease-in-out infinite;
+}
