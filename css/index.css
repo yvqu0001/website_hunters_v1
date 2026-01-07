@@ -49,6 +49,7 @@ h2,
   }
 }
 .popup {
+  place-content: center;
   border: none;
   background-color: var(--pink2);
   padding: 5rem;
