@@ -58,6 +58,24 @@ main {
     drop-shadow(2px 2px 0 var(--pink4));
 }
 
+details {
+  overflow: hidden;
+}
+
+/* collapsible content area */
+details::details-content {
+  /* block-size = height */
+  block-size: 0;
+  /* content-visibility:hidden by default for accessability, animated it */
+  transition: block-size 1s, content-visibility 1s;
+  /* attempt to animate 0 → auto smoothly. */
+  transition-behavior: allow-discrete;
+}
+
+details[open]::details-content {
+  block-size: auto;
+}
+
 .accordion_content p {
   padding-bottom: 2rem;
   color: var(--pink4);

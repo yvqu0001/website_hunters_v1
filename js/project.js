@@ -1,5 +1,6 @@
 console.log("loading instructions");
 
+// SVG FEMA
 document.querySelector("#eyes").classList.add("hide");
 document.querySelector("#teeth").classList.add("hide");
 document.querySelector("#nails").classList.add("hide");
@@ -81,3 +82,4 @@ function nailsDirty() {
     el.style.fill = "#f8cf00";
   });
 }
+// SVG FEMA
