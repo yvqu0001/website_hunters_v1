@@ -133,7 +133,7 @@ img {
 }
 
 svg.clickable-svg {
-  cursor: pointer; /* shows it’s clickable */
+  cursor: pointer;
   transition: transform 0.2s ease, filter 0.2s ease;
   filter: drop-shadow(-0.5px -0.5px 0 var(--pink1))
     drop-shadow(-1px -1px 0 var(--pink1))
@@ -146,12 +146,6 @@ svg.clickable-svg:hover {
     drop-shadow(-1.5px -1.5px 0 var(--pink1))
     drop-shadow(1px 1px 0 var(--pink4)) drop-shadow(1.5px 1.5px 0 var(--pink4));
 }
-
-/* svg.clickable-svg:hover [fill]:not([fill="none"]),
-svg.clickable-svg:hover [stroke]:not([stroke="none"]) {
-  fill: var(--blue);
-  stroke: var(--blue);
-} */
 
 header {
   position: relative;
