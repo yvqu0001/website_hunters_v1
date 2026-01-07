@@ -92,6 +92,10 @@ main {
   transform: scale(1.1);
 }
 
+.cta_btn_card:active {
+  transform: scale(1.2);
+}
+
 /* + sign */
 summary {
   list-style: none; /* removes any bullet fallback */

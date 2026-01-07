@@ -114,6 +114,10 @@ p {
   color: var(--blue);
 }
 
+.cta_btn:active {
+  transform: scale(1.2);
+}
+
 .button {
   cursor: pointer;
 }
@@ -145,6 +149,10 @@ svg.clickable-svg:hover {
   filter: drop-shadow(-1px -1px 0 var(--pink1))
     drop-shadow(-1.5px -1.5px 0 var(--pink1))
     drop-shadow(1px 1px 0 var(--pink4)) drop-shadow(1.5px 1.5px 0 var(--pink4));
+}
+
+svg.clickable-svg:active {
+  transform: scale(1.2);
 }
 
 header {

@@ -81,6 +81,10 @@ img.clickable:hover {
     drop-shadow(3px 3px 0 var(--blue));
 }
 
+img.clickable:active {
+  transform: scale(1.03);
+}
+
 @media (max-width: 425px) {
   .carousel_wrapper {
     display: block; /* easier for layout */
