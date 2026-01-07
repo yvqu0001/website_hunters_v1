@@ -8,6 +8,9 @@ const openBtn = document.getElementById("open_settings");
 openBtn.addEventListener("click", () => {
   popup.classList.remove("hidden");
 });
+openBtn.addEventListener("touchend", () => {
+  popup.classList.remove("hidden");
+});
 
 // CLOSE (X)
 closeBtn.addEventListener("click", () => {
